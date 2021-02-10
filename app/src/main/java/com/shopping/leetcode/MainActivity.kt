@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.shopping.leetcode.code.Main10
+import com.shopping.leetcode.code.Main11
 import com.shopping.leetcode.code.Main6
 import com.shopping.leetcode.code.Main9
 import com.shopping.leetcode.offer.Offer1
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main10().cc()
+        val codeAA = Main11().aa()
         Log.e("mll_codeAA","$codeAA   ${System.currentTimeMillis()-currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()

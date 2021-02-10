@@ -185,7 +185,7 @@ class Main10 {
 //            val subList = arrayListOf.subList(l, r)
 //            val ee = ee(subList, K)
 
-            val ee = f(A, left, right, K)
+            val ee = f(A, left, right, K )
 
             if (ee == K) {
                 hh++
@@ -199,18 +199,16 @@ class Main10 {
                 left += 1
                 right = K + left
             } else if (ee < K) {
-                if (right == A.size) {
+                right += (K - ee)
+                if (right > A.size) {
                     left += 1
                     right = K + left
-                } else {
-                    right += 1
                 }
             }
         }
-        Log.e("mll____________", hh.toString())
+        Log.e("mll____________ ", hh.toString())
         return hh
     }
-
 
     private fun f(a: IntArray, l: Int, r: Int, k: Int): Int {
         val of = hashSetOf<Int>()
@@ -218,6 +216,8 @@ class Main10 {
             of.add(a[i])
             if (of.size > k) {
                 return of.size
+            }else if(of.size +(a.size-i) <k){
+                return k-(of.size +i)
             }
         }
         return of.size
