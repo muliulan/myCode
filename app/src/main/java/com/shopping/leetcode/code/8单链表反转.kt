@@ -15,7 +15,7 @@ class Main8(){
     输入: 1->2->3->4->5->NULL
     输出: 5->4->3->2->1->NULL
      * */
-    fun aa(h: ListNode){
+    fun aa(h: ListNode):ListNode{
         var p=h
         var c=h.next
         var t: ListNode?=null
@@ -27,7 +27,8 @@ class Main8(){
             p=c
             c=t
         }
-//        return c
+        h.next=null
+        return p
 
     }
 }
