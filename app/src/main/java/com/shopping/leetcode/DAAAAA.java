@@ -7,4 +7,13 @@ package com.shopping.leetcode;
  */
 
 public class DAAAAA {
+
+    void dd(){
+
+
+//        int[][] matrix=new int[][];
+
+
+
+    }
 }

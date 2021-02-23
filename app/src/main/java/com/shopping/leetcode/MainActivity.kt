@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main14().bb()
+        val codeAA = Main18().aa()
         Log.e("mll_codeAA","$codeAA   ${System.currentTimeMillis()-currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()
