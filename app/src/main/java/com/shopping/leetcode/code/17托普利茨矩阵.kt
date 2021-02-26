@@ -17,10 +17,7 @@ class Main17() {
 
     fun aa(): Boolean {
         //[1,2,3,4],[5,1,2,3],[9,5,1,2]
-        val matrix: Array<IntArray> = arrayOf<IntArray>()
-        matrix.set(0, intArrayOf(1, 3, 4))
-        matrix.set(1, intArrayOf(5, 1, 2, 3))
-        matrix.set(2, intArrayOf(9, 5, 1, 2))
+        val matrix: Array<IntArray> = arrayOf<IntArray>(intArrayOf(1, 3, 4),intArrayOf(5, 1, 2, 3),intArrayOf(9, 5, 1, 2))
 
         if(matrix.size==1){
             return true

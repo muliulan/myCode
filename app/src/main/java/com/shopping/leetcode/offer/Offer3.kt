@@ -53,8 +53,3 @@ class Offer3 {
         return p
     }
 }
-
-
-data class Text(val a: Int) {
-    var t: Text? = null
-}
