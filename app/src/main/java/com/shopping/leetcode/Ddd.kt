@@ -11,9 +11,4 @@ zhaochenshuo
 class Ddd :DAAAAA(){
 
 
-    override fun dd() {
-        super.dd()
-
-        Log.e("mll", "bbbbb")
-    }
 }

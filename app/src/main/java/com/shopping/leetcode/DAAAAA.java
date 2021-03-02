@@ -1,9 +1,7 @@
 package com.shopping.leetcode;
 
-import android.util.Log;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * 描述:
@@ -11,14 +9,24 @@ import java.util.List;
  * 2021/2/22
  */
 
-public   class DAAAAA {
+public class DAAAAA {
 
 
-    void dd(){
+    int[] sums;
 
-        List<Integer> integers = new ArrayList<>();
-        integers.add(1);
-        integers.add(2);
-        integers.add(3);
+    public void NumArray(Integer[] nums) {
+        int n = nums.length;
+        sums = new int[n + 1];
+        for (int i = 0; i < n; i++) {
+            sums[i + 1] = sums[i] + nums[i];
+        }
+
+        Arrays.sort(nums, (a, b) -> b-a);
+
+
+    }
+
+    public int sumRange(int i, int j) {
+        return sums[j + 1] - sums[i];
     }
 }

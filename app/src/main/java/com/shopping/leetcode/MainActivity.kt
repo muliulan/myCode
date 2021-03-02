@@ -1,12 +1,10 @@
 package com.shopping.leetcode
 
-import android.content.ContentUris
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
-import com.shopping.leetcode.code.*
+import com.shopping.leetcode.code.Main22
+import com.shopping.leetcode.code.Main23
 import com.shopping.leetcode.offer.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main21().aa()
+        val codeAA = Offer30().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()
@@ -31,7 +29,8 @@ class MainActivity : AppCompatActivity() {
 //            imageView.setImageBitmap(bitmap)
 //        }
 
-        val a :DAAAAA = Ddd()
-        a.dd()
+
     }
+
+
 }
