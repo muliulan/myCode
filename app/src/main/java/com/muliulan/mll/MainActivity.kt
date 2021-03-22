@@ -3,7 +3,8 @@ package com.muliulan.mll
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.muliulan.mll.code.`31-60`.Main32
+import com.muliulan.mll.code.`31-60`.Main37
+import com.muliulan.mll.code.code_offer.Off12
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main32().aa()
+        val codeAA = Main37().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()
@@ -26,9 +27,6 @@ class MainActivity : AppCompatActivity() {
 //            fd.close()
 //            imageView.setImageBitmap(bitmap)
 //        }
-
-
+        DAAAAA.dd()
     }
-
-
 }

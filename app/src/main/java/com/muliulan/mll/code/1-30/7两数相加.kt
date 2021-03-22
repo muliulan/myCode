@@ -1,5 +1,7 @@
 package com.muliulan.mll.code.`1-30`
 
+import com.muliulan.mll.offer.ListNode
+
 /**
 描述:
 zhaochenshuo
@@ -53,7 +55,5 @@ class Main7() {
 
 }
 
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
+
 
