@@ -13,6 +13,7 @@ public class Dsssss {
         int a = 0b011110101;
         a = ~a;
 
+        a=a<<2;
     }
 
     public boolean searchMatrix(int[][] matrix, int target) {
