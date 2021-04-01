@@ -6,7 +6,7 @@ zhaochenshuo
 2021/2/26
  */
 
-class Ddd :DAAAAA(){
+class Ddd  {
 
 
 }

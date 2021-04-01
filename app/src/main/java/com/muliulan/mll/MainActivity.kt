@@ -3,10 +3,7 @@ package com.muliulan.mll
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.muliulan.mll.code.`31-60`.Main37
-import com.muliulan.mll.code.`31-60`.Main39
-import com.muliulan.mll.code.`31-60`.Main41
-import com.muliulan.mll.code.`31-60`.Main42
+import com.muliulan.mll.code.`31-60`.*
 import com.muliulan.mll.code.code_offer.Off12
 import java.util.*
 
@@ -17,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main42().aa()
+        val codeAA = Main46().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()

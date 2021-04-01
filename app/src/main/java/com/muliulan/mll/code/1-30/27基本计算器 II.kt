@@ -35,10 +35,9 @@ class Main27() {
         var ps = '+'
         var num = 0
         val n = s.length
-        val toCharArray = s.toCharArray()
 
         for (a in 0 until n) {
-            val c = toCharArray[a]
+            val c = s[a]
             //如果是数字
             if (Character.isDigit(c)) {
                 num = num * 10 + s[a].toInt() - '0'.toInt()

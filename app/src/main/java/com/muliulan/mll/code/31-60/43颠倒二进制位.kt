@@ -38,12 +38,8 @@ class Main43 {
      *
      * */
     fun reverseBits(): Int {
-        val n:Int = (00000010100101000001111010011100).
-        Integer.reverse
-
-
-
-        return 0
+        val n: Int = 111101
+        return Integer.reverse(n)
     }
 
 }
