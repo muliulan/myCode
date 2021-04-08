@@ -1,4 +1,4 @@
-package com.muliulan.mll.set_module
+package com.muliulan.mll.shuju_jiegou
 
 import android.util.Log
 
@@ -9,7 +9,7 @@ zhaochenshuo
  */
 
 
-class SearchTree<E> {
+class _3SearchTree<E> {
 
     var root: Node<Int>? = null
 

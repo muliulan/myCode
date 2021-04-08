@@ -1,4 +1,4 @@
-package com.muliulan.mll.set_module
+package com.muliulan.mll.shuju_jiegou
 
 /**
 描述: 双向链表
@@ -6,7 +6,7 @@ zhaochenshuo
 2021/3/23
  */
 
-class MyLinkedList<E> {
+class _1MyLinkedList<E> {
 
     var size = 0
     var finst: LinkText<E>? = null

@@ -1,4 +1,4 @@
-package com.muliulan.mll.set_module
+package com.muliulan.mll.shuju_jiegou
 
 import android.util.Log
 
@@ -8,7 +8,7 @@ zhaochenshuo
 2021/3/25
  */
 
-class TwoTree {
+class _2TwoTree {
 
     /**
      *        A
