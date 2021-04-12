@@ -130,6 +130,7 @@ class _3SearchTree<E> {
                 }
                 n.parent = null
             } else {
+                //删除根节点
                 //补上右子树的左子树上最小的一个
                 val leftNode = dd(n.right)
                 //1

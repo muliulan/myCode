@@ -15,6 +15,7 @@ class _4HaffmanTree<T> {
     var root: TreeNode<String>? = null
 
 
+
     /**
      * 存数据
      * 初始化一个树

@@ -6,7 +6,7 @@ import android.util.Log
 import com.muliulan.mll.code.`31-60`.*
 import com.muliulan.mll.code.code_offer.Off12
 import java.util.*
-
+//  ↖↑↗←↙↓↘→
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main48().aa()
+        val codeAA = Main53().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()

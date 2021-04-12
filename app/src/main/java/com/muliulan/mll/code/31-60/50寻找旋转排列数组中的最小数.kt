@@ -35,8 +35,33 @@ class Main50 {
      *
      * */
     fun aa(): Int {
-        val nums: IntArray = intArrayOf(1, 2, 3, 4)
-        Arrays.sort(nums)
-        return 1
+        val nums: IntArray = intArrayOf(4, 5, 6, 7, 0, 1, 2)
+        //方法1
+//        Arrays.sort(nums)
+        //方法2   二分查找
+        var l = 0
+        var r = nums.size - 1
+        while (l < r) {
+            val a = (l + r) / 2
+
+            val ll = nums[l]
+            val rr = nums[r]
+            val aa = nums[a]
+
+            /** @@@@ $&@@@
+             *  $ 最小值
+             *  & 指向到位置
+             * */
+            if (rr > aa) {
+                r = a
+            } else {
+                /** @@$&@@ @@@
+                 *  $ 最小值
+                 *  & 指向到位置
+                 * */
+                l = a + 1
+            }
+        }
+        return nums[l]
     }
 }
