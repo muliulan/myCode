@@ -41,6 +41,7 @@ class Main8() {
                 while (curr != null) {
                 ListNode next = curr.next;
                 curr.next = prev;
+
                 prev = curr;
                 curr = next;
                 }
@@ -49,5 +50,4 @@ class Main8() {
     }
      *
      * */
-
 }

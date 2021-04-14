@@ -1,13 +1,16 @@
 package com.muliulan.mll
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.annotation.RequiresApi
 import com.muliulan.mll.code.`31-60`.*
 import com.muliulan.mll.code.code_offer.Off12
 import java.util.*
 //  ↖↑↗←↙↓↘→
 class MainActivity : AppCompatActivity() {
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,6 +32,34 @@ class MainActivity : AppCompatActivity() {
 //            imageView.setImageBitmap(bitmap)
 //        }
 
+
+        val hashMap = HashMap<String, Int>()
+        hashMap.put("q",2)
+        hashMap.put("a",3)
+        hashMap.put("c",1)
+
+        hashMap.forEach { t, u ->
+            Log.e("mll",t+"    "+u)
+        }
+
+
+        val treeNode1 = Main54.TreeNode(4)
+        val treeNode2 = Main54.TreeNode(2)
+        val treeNode3 = Main54.TreeNode(6)
+
+        treeNode1.left=treeNode2
+        treeNode1.right=treeNode3
+
+
+        val treeNode4 = Main54.TreeNode(1)
+        val treeNode5 = Main54.TreeNode(3)
+
+        treeNode2.left=treeNode4
+        treeNode2.right=treeNode5
+
+
+
+        val minDiffInBST = Main54().minDiffInBST(treeNode1)
     }
 
     fun aa(arr: IntArray, le: Int = 0, ri: Int = arr.size - 1) {
