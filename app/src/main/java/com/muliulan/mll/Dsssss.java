@@ -1,36 +1,30 @@
 package com.muliulan.mll;
 
+import android.app.Activity;
+import android.content.Context;
+import android.view.inputmethod.InputMethodManager;
+
 /**
  * 描述:
  * zhaochenshuo
  * 2021/3/29
  */
 
-public class Dsssss {
+public class Dsssss extends Activity {
 
 
-    void dd() {
-        int a = 0b011110101;
-        a = ~a;
-
-        a=a<<2;
-    }
-
-    public boolean searchMatrix(int[][] matrix, int target) {
-
-
-        for (int[] ints : matrix) {
-            int anInt = ints[0];
-            int anInt1 = ints[ints.length - 1];
-            if (target >= anInt && target <= anInt1) {
-                for (int i : ints) {
-                    if (i == target) {
-                        return true;
-                    }
-                }
-            }
+    public int robRange(int[] nums, int start, int end) {
+        int first = nums[start], second = Math.max(nums[start], nums[start + 1]);
+        for (int i = start + 2; i <= end; i++) {
+            int temp = second;
+            second = Math.max(first + nums[i], second);
+            first = temp;
         }
-        return false;
+
+
+        InputMethodManager systemService = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        return second;
     }
 
 

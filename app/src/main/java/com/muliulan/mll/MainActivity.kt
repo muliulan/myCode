@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val currentTimeMillis = System.currentTimeMillis()
 
-        val codeAA = Main53().aa()
+        val codeAA = Main56().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 
 //        val offerAA = Offer6().aa()
@@ -33,35 +33,12 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
-        val hashMap = HashMap<String, Int>()
-        hashMap.put("q",2)
-        hashMap.put("a",3)
-        hashMap.put("c",1)
-
-        hashMap.forEach { t, u ->
-            Log.e("mll",t+"    "+u)
-        }
-
-
-        val treeNode1 = Main54.TreeNode(4)
-        val treeNode2 = Main54.TreeNode(2)
-        val treeNode3 = Main54.TreeNode(6)
-
-        treeNode1.left=treeNode2
-        treeNode1.right=treeNode3
-
-
-        val treeNode4 = Main54.TreeNode(1)
-        val treeNode5 = Main54.TreeNode(3)
-
-        treeNode2.left=treeNode4
-        treeNode2.right=treeNode5
-
-
-
-        val minDiffInBST = Main54().minDiffInBST(treeNode1)
+//        ArrayList<Int>().indexOf(?)
     }
+class Mmmm(){
 
+    var a=0
+}
     fun aa(arr: IntArray, le: Int = 0, ri: Int = arr.size - 1) {
         var left: Int = le
         var right: Int = ri
