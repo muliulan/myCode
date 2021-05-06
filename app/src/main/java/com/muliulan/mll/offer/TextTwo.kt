@@ -6,40 +6,40 @@ zhaochenshuo
 2021/2/25
  */
 
-data class TextTwo(var a: Int ) {
+data class TextTwo(var `val`: Int ) {
 
-    var l: TextTwo ?=null
-    var r: TextTwo ? =null
+    var left: TextTwo ?=null
+    var right: TextTwo ? =null
 
 
     companion object{
 
         /**
-         *  *    8
+         *  *    10
          *    /    \
-         *   6     10
+         *   5     15
          *  /  \   / \
-         * 5   7  9  11
+         * 3   7  9  18
          *
          * */
         fun ab():TextTwo{
-            val one = TextTwo(8)
+            val one = TextTwo(10)
 
-            val two1 = TextTwo(6)
-            val two2 = TextTwo(10)
+            val two1 = TextTwo(5)
+            val two2 = TextTwo(15)
 
-            val three1 = TextTwo(5)
+            val three1 = TextTwo(3)
             val three2 = TextTwo(7)
             val three3 = TextTwo(9)
-            val three4 = TextTwo(11)
+            val three4 = TextTwo(18)
 
-            one.l = two1
-            one.r = two2
+            one.left = two1
+            one.right = two2
 
-            two1.l = three1
-            two1.r = three2
-            two2.l = three3
-            two2.r = three4
+            two1.left = three1
+            two1.right = three2
+            two2.left = three3
+            two2.right = three4
             return one
         }
 

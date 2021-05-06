@@ -33,14 +33,14 @@ class Offer22_ {
     private fun bb(textTwo: TextTwo?, a: Int, list: ArrayList<Int>) {
         if (textTwo == null) return
         var b=a
-        list.add(textTwo.a)
-        b-=textTwo.a
+        list.add(textTwo.`val`)
+        b-=textTwo.`val`
 
-        if (b == 0 && textTwo.l == null && textTwo.r == null) {
+        if (b == 0 && textTwo.left == null && textTwo.right == null) {
             all.add(list)
         } else if (b > 0) {
-            bb(textTwo.l, b, list)
-            bb(textTwo.r, b, list)
+            bb(textTwo.left, b, list)
+            bb(textTwo.right, b, list)
         }
         list.remove(list.size - 1)
     }

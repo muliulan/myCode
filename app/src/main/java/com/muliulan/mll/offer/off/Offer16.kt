@@ -16,12 +16,12 @@ class Offer16 {
      * */
 
     fun aa( t: TextTwo?){
-        val a: TextTwo? = t?.l
-        t?.l=t?.r
-        t?.r=a
+        val a: TextTwo? = t?.left
+        t?.left=t?.right
+        t?.right=a
 
-        aa(t?.l)
-        aa(t?.r)
+        aa(t?.left)
+        aa(t?.right)
 
     }
 

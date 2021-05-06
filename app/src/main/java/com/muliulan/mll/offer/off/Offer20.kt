@@ -37,11 +37,11 @@ class Offer20 {
         while (!linkedList.isEmpty()) {
             val poll = linkedList.poll()
 
-            if (poll.l != null) {
-                linkedList.add(poll.l!!)
+            if (poll.left != null) {
+                linkedList.add(poll.left!!)
             }
-            if (poll.r != null) {
-                linkedList.add(poll.r!!)
+            if (poll.right != null) {
+                linkedList.add(poll.right!!)
             }
 
             arrayList.add(poll)
@@ -49,7 +49,7 @@ class Offer20 {
         }
         var a=""
         arrayList.forEach {
-            a+="${it.a} ,"
+            a+="${it.`val`} ,"
         }
         Log.e("mll zzz",a)
     }

@@ -10,6 +10,9 @@ zhaochenshuo
 
 class _8Lbs {
 
+    /**
+     * 计算 1 1 3 4 7 11
+     * */
     fun f1(c: Int): Int {
         val intArray = IntArray(c)
         intArray[0] = 1
@@ -20,11 +23,13 @@ class _8Lbs {
         return intArray[c - 1]
     }
 
-    fun max(a: Int, b: Int): Int {
-        return if (a > b) a else b
-    }
 
     // Lcs算法
+    /**
+     * 找到两个字符串中相同的子集
+     * aa="B,D,C,A,B,A"
+     *  bb="A,B,C,B,D,A,B"
+     * */
     fun getLcs(aa: String, bb: String): String {
 
         val aArray = aa.toCharArray()
@@ -41,18 +46,19 @@ class _8Lbs {
             array[b][0] = 0
         }
 
+        //相同的取左上加1,不同的取上和左中的最大值
         for (b in 1 until array.size) {
             for (a in 1 until array[b].size) {
                 if (bArray[b - 1] == aArray[a - 1]) {
                     //如果相等就取左上角的值+1
-                    array[b][a] = array[a - 1][b - 1] + 1
+                    array[b][a] = array[b - 1][a- 1] + 1
                 } else {
                     //如果不相等左值和上值取最大值
-                    array[b][a] = Math.max(array[a - 1][b], array[a][b - 1])
+                    array[b][a] = Math.max(array[b - 1][a], array[b][a - 1])
                 }
             }
         }
-        //从后往前找出结果
+        //从后往前打印出结果
         val stack = Stack<Char>()
         var x = aArray.size - 1
         var y = bArray.size - 1
@@ -69,6 +75,7 @@ class _8Lbs {
                 }
             }
         }
+        //结果正过来
         var a = ""
         while (!stack.isEmpty()) {
             a += stack.pop()

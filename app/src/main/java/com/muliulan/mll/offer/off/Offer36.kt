@@ -18,8 +18,8 @@ class Offer36 {
 
         val ab = TextTwo.ab()
 
-        val al = aa(tt.l!!)
-        val ar = aa(tt.r!!)
+        val al = aa(tt.left!!)
+        val ar = aa(tt.right!!)
 
 
         return if (al > ar) al + 1 else ar + 1
