@@ -1,7 +1,7 @@
 package com.muliulan.mll.offer.off
 
 import android.util.Log
-import com.muliulan.mll.offer.TextTwo
+import com.muliulan.mll.offer.TreeNode
 import java.util.ArrayList
 
 /**
@@ -18,7 +18,7 @@ class Offer22_ {
     val all = ArrayList<ArrayList<Int>>()
     fun aa() {
 
-        val ab = TextTwo.ab()
+        val ab = TreeNode.ab()
         val a = 19
 
         bb(ab, a, ArrayList<Int>())
@@ -30,7 +30,7 @@ class Offer22_ {
         Log.e("mllaaa", aa)
     }
 
-    private fun bb(textTwo: TextTwo?, a: Int, list: ArrayList<Int>) {
+    private fun bb(textTwo: TreeNode?, a: Int, list: ArrayList<Int>) {
         if (textTwo == null) return
         var b=a
         list.add(textTwo.`val`)

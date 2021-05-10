@@ -1,7 +1,7 @@
 package com.muliulan.mll.offer.off
 
 import android.util.Log
-import com.muliulan.mll.offer.TextTwo
+import com.muliulan.mll.offer.TreeNode
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -24,14 +24,14 @@ class Offer20 {
      * */
     fun aa() {
 
-        val one = TextTwo.ab()
+        val one = TreeNode.ab()
         bb(one)
     }
 
-    private fun bb(t: TextTwo) {
-        val arrayList = ArrayList<TextTwo>()
+    private fun bb(t: TreeNode) {
+        val arrayList = ArrayList<TreeNode>()
 
-        val linkedList = LinkedList<TextTwo>()
+        val linkedList = LinkedList<TreeNode>()
         linkedList.add(t)
 
         while (!linkedList.isEmpty()) {

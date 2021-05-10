@@ -1,7 +1,7 @@
 package com.muliulan.mll.code.`61-90`
 
 import com.muliulan.mll.code.`31-60`.Main54
-import com.muliulan.mll.offer.TextTwo
+import com.muliulan.mll.offer.TreeNode
 import com.muliulan.mll.shuju_jiegou._4HaffmanTree
 import java.util.*
 
@@ -33,13 +33,13 @@ class Main63 {
     val arrayList = ArrayList<Int>()
 
     fun increasingBST(root: TreeNode?): TreeNode? {
-        val ab = TextTwo.ab()
+        val ab = TreeNode.ab()
         aa(ab)
         arrayList.sort()
-        val treeNode = TextTwo(arrayList[0])
+        val treeNode = TreeNode(arrayList[0])
         var aa=treeNode
         for(a in 1 until arrayList.size){
-            val treeNode1 = TextTwo(arrayList[a])
+            val treeNode1 = TreeNode(arrayList[a])
             aa.right=treeNode1
             aa = treeNode1
         }
@@ -47,7 +47,7 @@ class Main63 {
     }
 
 
-    fun aa(root: TextTwo?) {
+    fun aa(root: TreeNode?) {
         if (root == null) {
             return
         }
@@ -56,9 +56,5 @@ class Main63 {
         aa(root.right)
     }
 
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
 
 }

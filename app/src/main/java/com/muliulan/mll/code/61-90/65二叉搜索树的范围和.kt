@@ -1,6 +1,6 @@
 package com.muliulan.mll.code.`61-90`
 
-import com.muliulan.mll.offer.TextTwo
+import com.muliulan.mll.offer.TreeNode
 import com.muliulan.mll.shuju_jiegou._4HaffmanTree
 import java.util.ArrayList
 
@@ -17,9 +17,9 @@ class Main65() {
      * 给定二叉搜索树的根结点 root，返回值位于范围 [low, high] 之间的所有结点的值的和。
      * */
     val arrayList = ArrayList<Int>()
-    fun rangeSumBST(root: Main63.TreeNode?): Int {
+    fun rangeSumBST(root: TreeNode?): Int {
 
-        val ab = TextTwo.ab()
+        val ab = TreeNode.ab()
         val low: Int = 7
         val high: Int = 15
 
@@ -65,7 +65,7 @@ class Main65() {
 //        }
 //    }
 
-    fun bb(root: TextTwo?, l: Int, r: Int) {
+    fun bb(root: TreeNode?, l: Int, r: Int) {
         arrayList.add(root!!.`val`)
         if (root!!.`val` > l && root.left != null) {
             bb(root.left, l, r)

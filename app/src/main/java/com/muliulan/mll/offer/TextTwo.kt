@@ -6,10 +6,10 @@ zhaochenshuo
 2021/2/25
  */
 
-data class TextTwo(var `val`: Int ) {
+data class TreeNode(var `val`: Int ) {
 
-    var left: TextTwo ?=null
-    var right: TextTwo ? =null
+    var left: TreeNode ?=null
+    var right: TreeNode ? =null
 
 
     companion object{
@@ -22,16 +22,16 @@ data class TextTwo(var `val`: Int ) {
          * 3   7  9  18
          *
          * */
-        fun ab():TextTwo{
-            val one = TextTwo(10)
+        fun ab():TreeNode{
+            val one = TreeNode(10)
 
-            val two1 = TextTwo(5)
-            val two2 = TextTwo(15)
+            val two1 = TreeNode(5)
+            val two2 = TreeNode(15)
 
-            val three1 = TextTwo(3)
-            val three2 = TextTwo(7)
-            val three3 = TextTwo(9)
-            val three4 = TextTwo(18)
+            val three1 = TreeNode(3)
+            val three2 = TreeNode(7)
+            val three3 = TreeNode(9)
+            val three4 = TreeNode(18)
 
             one.left = two1
             one.right = two2
