@@ -45,26 +45,6 @@ class Main65() {
         return num
     }
 
-//    fun aa(root: TextTwo?, a: Int) {
-//
-//        var z = false
-//        arrayList.forEach {
-//            if (it == root!!.a) {
-//                z = true
-//            }
-//        }
-//        if (!z) {
-//            arrayList.add(root!!.a)
-//        }
-//        if (a > root.a && root.r != null) {
-//            aa(root.r, a)
-//        } else if (a < root.a && root.l != null) {
-//            aa(root.l, a)
-//        } else if (a == root.a) {
-//            return
-//        }
-//    }
-
     fun bb(root: TreeNode?, l: Int, r: Int) {
         arrayList.add(root!!.`val`)
         if (root!!.`val` > l && root.left != null) {

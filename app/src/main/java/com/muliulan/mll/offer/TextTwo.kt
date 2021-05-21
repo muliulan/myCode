@@ -6,13 +6,21 @@ zhaochenshuo
 2021/2/25
  */
 
-data class TreeNode(var `val`: Int ) {
+data class TreeNode(var `val`: Int) {
 
-    var left: TreeNode ?=null
-    var right: TreeNode ? =null
+    var left: TreeNode? = null
+    var right: TreeNode? = null
+
+    //计算树的深度
+    fun TreeDepth(root: TreeNode?): Int {
+        if (root == null) return 0
+        val left = TreeDepth(root.left)
+        val right = TreeDepth(root.right)
+        return Math.max(left, right) + 1
+    }
 
 
-    companion object{
+    companion object {
 
         /**
          *  *    10
@@ -22,7 +30,7 @@ data class TreeNode(var `val`: Int ) {
          * 3   7  9  18
          *
          * */
-        fun ab():TreeNode{
+        fun ab(): TreeNode {
             val one = TreeNode(10)
 
             val two1 = TreeNode(5)

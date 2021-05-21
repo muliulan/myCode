@@ -2,7 +2,20 @@ package com.muliulan.mll;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.view.inputmethod.InputMethodManager;
+
+import androidx.annotation.RequiresApi;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * 描述:
@@ -16,23 +29,9 @@ import android.view.inputmethod.InputMethodManager;
 public class Dsssss extends Activity {
 
 
-//    public int coinChange(int[] coins, int amount) {
-//        for (int a = 0; a * a < c; a++) {
-//
-//            double sqrt = Math.sqrt(c - a * a);
-//            if(sqrt== (int)sqrt){
-//
-//            }
-//
-//        }
-//        return 1;
-//    }
 
-
+    @RequiresApi(api = Build.VERSION_CODES.N)
     void dd(){
-
-        int a=1,b=2;
-        a=a^b;
 
     }
 }
