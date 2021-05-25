@@ -13,30 +13,7 @@ class Main81 {
     fun aa(): Int {
         val nums1: IntArray = intArrayOf(2, 5, 1, 2, 5)
         val nums2: IntArray = intArrayOf(10, 5, 2, 1, 5, 2)
-
-        val arrayList = ArrayList<ArrayList<Int>>()
-
-        nums1.forEach {
-            arrayList.add(ArrayList<Int>())
-        }
-
-        for (a in 0 until nums1.size) {
-            for (b in 0 until nums2.size) {
-                val i = nums2[b]
-                if (nums1[a] == i) {
-                    arrayList[a].add(b)
-                }
-            }
-        }
-
-        var num = 0
-        var s = 0
-        arrayList.forEach {
-            it.forEach {
-
-            }
-
-        }
+        
 
         val array = Array<IntArray>(nums1.size + 1) {
             IntArray(nums2.size + 1)
