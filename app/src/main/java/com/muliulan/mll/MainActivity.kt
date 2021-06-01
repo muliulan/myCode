@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.muliulan.mll.code.`61-90`.*
 import com.muliulan.mll.dong_nao.ImageResize
 import com.muliulan.mll.offer.TreeNode
+import java.util.ArrayList
 
 
 //  ↖↑↗←↙↓↘→
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val currentTimeMillis = System.currentTimeMillis()
-        val codeAA = Main81().aa()
+        val codeAA = Main86().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 //        val offerAA = Offer6().aa()
 //        Log.e("mll_offerAA", "$offerAA   ${System.currentTimeMillis() - currentTimeMillis}")
@@ -35,7 +36,19 @@ class MainActivity : AppCompatActivity() {
 //         Dsssss(). coinChange(intArrayOf(1,2,5),11)
 
 
+//        val arrayList = ArrayList<Int>()
+//        arrayList.add(3)
+//        arrayList.add(2)
+//        arrayList.add(1)
+//
+//        arrayList.forEach {
+//            Log.e("mll_codeAA",it.toString())
+//        }
+        val mddd : Mddd ?= null
+        Log.e("mll_codeAA",(mddd?.a==1).toString())
     }
 
-
+    class Mddd(){
+        var a=1
+    }
 }

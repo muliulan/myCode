@@ -29,9 +29,16 @@ import java.util.stream.Collectors;
 public class Dsssss extends Activity {
 
 
+    int hammingWeight(int n) {
+        char[] chars = (n + "").toCharArray();
+        int a=0;
+        for (char aChar : chars) {
+            if(aChar=='1'){
+                a++;
+            }
+        }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    void dd(){
-
+        Integer.bitCount(1);
+        return a;
     }
 }

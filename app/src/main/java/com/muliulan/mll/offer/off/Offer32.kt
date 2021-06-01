@@ -23,21 +23,27 @@ class Offer32 {
 
         for (a in 0 until toCharArray.size) {
             val i = toCharArray[a] - 'a'
-            intArray[i]= intArray[i]+1
+            intArray[i] = intArray[i] + 1
         }
 
-
-        for (b in 0 until intArray.size) {
-            if (intArray[b] == 1) {
-
-                val c = b + 97
-                val toChar = c.toChar()
-                Log.e("mllzz", toChar.toString())
+        for (b in 0 until toCharArray.size) {
+            val i = toCharArray[b] - 'a'
+            if (intArray[i] == 1) {
+                toCharArray[b]
                 return
             }
-
         }
 
+//        for (b in 0 until intArray.size) {
+//            if (intArray[b] == 1) {
+//
+//                val c = b + 97
+//                val toChar = c.toChar()
+//                Log.e("mllzz", toChar.toString())
+//                return
+//            }
+//
+//        }
 
     }
 

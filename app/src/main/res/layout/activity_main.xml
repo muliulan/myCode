@@ -9,21 +9,24 @@
 
 
         <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/text3"
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!" />
 
         <TextView
+            app:layout_constraintLeft_toLeftOf="@+id/text3"
             android:id="@+id/text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:text="Hello World!1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+            android:text="Hello World!111"
             app:layout_constraintTop_toBottomOf="@+id/text1" />
 
 
     <TextView
+        app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

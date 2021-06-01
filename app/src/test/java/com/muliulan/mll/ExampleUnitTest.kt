@@ -3,6 +3,7 @@ package com.muliulan.mll
 import org.junit.Test
 
 import org.junit.Assert.*
+import java.util.ArrayList
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,6 +13,16 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+
+        val arrayList = ArrayList<Int>()
+        arrayList.add(3)
+        arrayList.add(2)
+        arrayList.add(1)
+
+        arrayList.forEach {
+            print(it)
+        }
+
+
     }
 }
