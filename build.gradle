@@ -2,7 +2,13 @@
 buildscript {
     ext.kotlin_version = "1.4.10"
     repositories {
-        google()
+
+//        maven {
+//            url 'https://maven.aliyun.com/repository/public/'
+//        }
+//        mavenLocal()
+//        mavenCentral()
+                google()
         jcenter()
     }
     dependencies {
@@ -16,8 +22,13 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+//        google()
+//        jcenter()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        mavenLocal()
+        mavenCentral()
     }
 }
 
