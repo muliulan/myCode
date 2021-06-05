@@ -6,7 +6,7 @@ zhaochenshuo
 2021/5/22
  */
 
-class Design {
+class Design3 {
 
     /**
      * 定义:提供一个用于重建的对象的接口,无须指定实现类
@@ -33,7 +33,7 @@ class Text1 : Abs() {
 
 class Text2 : Abs() {
     override fun text1(): Int {
-        return 1
+        return 22
     }
 }
 

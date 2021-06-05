@@ -17,6 +17,23 @@ data class ListNode(var `val`: Int) {
             return text
         }
 
+        fun getA(arr: IntArray): ListNode {
+            val text = ListNode(arr[0])
+            var taa=text
+            for (a in 1 until arr.size) {
+
+                taa.next=ListNode(arr[a])
+                taa= taa.next!!
+//                var tttt: ListNode? = null
+//                while (text.next != null) {
+//                    tttt = text.next
+//                }
+//                tttt?.next = ListNode(arr[a])
+            }
+            return text
+        }
+
+
     }
 
 }
