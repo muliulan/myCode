@@ -3,7 +3,7 @@ package com.muliulan.mll
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.muliulan.mll.code.`91-120`.Main91
+import com.muliulan.mll.code.`91-120`.Main99
 
 
 //  ↖↑↗←↙↓↘→    AppCompatActivity
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val currentTimeMillis = System.currentTimeMillis()
-        val codeAA = Main91().aa()
+        val codeAA = Main99().aa()
         Log.e("mll_codeAA", "$codeAA   ${System.currentTimeMillis() - currentTimeMillis}")
 //        val offerAA = Offer6().aa()
 //        Log.e("mll_offerAA", "$offerAA   ${System.currentTimeMillis() - currentTimeMillis}")

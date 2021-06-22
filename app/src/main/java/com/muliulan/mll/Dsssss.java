@@ -1,21 +1,6 @@
 package com.muliulan.mll;
 
 import android.app.Activity;
-import android.content.Context;
-import android.os.Build;
-import android.view.inputmethod.InputMethodManager;
-
-import androidx.annotation.RequiresApi;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /**
  * 描述:
@@ -30,15 +15,12 @@ public class Dsssss extends Activity {
 
 
     int hammingWeight(int n) {
-        char[] chars = (n + "").toCharArray();
-        int a=0;
-        for (char aChar : chars) {
-            if(aChar=='1'){
-                a++;
-            }
-        }
 
-        Integer.bitCount(1);
-        return a;
+
+
+
+        int i = 111 & (1 << 222);
+//        val i = 111 and (1 shl 222)
+        return 1;
     }
 }
