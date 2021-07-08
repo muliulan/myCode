@@ -15,7 +15,7 @@ zhaochenshuo
  */
 
 class Ddd(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
-    View(context, attrs, defStyleAttr),GestureDetector.OnGestureListener {
+    View(context, attrs, defStyleAttr), GestureDetector.OnGestureListener {
 
 
 
@@ -26,9 +26,6 @@ class Ddd(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
         val options = BitmapFactory.Options()
         //手势滑动
         val gestureDetector = GestureDetector(context, this)
-
-
-
 
 
     }
@@ -64,7 +61,16 @@ class Ddd(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
         velocityX: Float,
         velocityY: Float
     ): Boolean {
-        TODO("Not yet implemented")
+        return false
+    }
+
+
+    enum class Answer {
+        YES,
+        NO {},
+        MAYBE {
+            override fun toString() = """¯\_(ツ)_/¯"""
+        }
     }
 
 

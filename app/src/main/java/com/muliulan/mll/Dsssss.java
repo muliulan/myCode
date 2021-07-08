@@ -14,13 +14,16 @@ import android.app.Activity;
 public class Dsssss extends Activity {
 
 
-    int hammingWeight(int n) {
+	int hammingWeight(int n) {
+
+		int a = 0;
+		for (int sum = 1; sum <= 22; sum <<= 1) {
+			a = (a + a) % a;
+		}
 
 
-
-
-        int i = 111 & (1 << 222);
+		int i = 111 & (1 << 222);
 //        val i = 111 and (1 shl 222)
-        return 1;
-    }
+		return 1;
+	}
 }
