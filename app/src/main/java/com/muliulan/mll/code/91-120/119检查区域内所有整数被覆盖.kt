@@ -14,7 +14,7 @@ class Main119 {
         val intArray = IntArray(1111)
         ranges.forEach {
             val i = it[0]
-            val i1 = it[it.size - 1]
+            val i1 = it[1]
             for (a in i..i1) {
                 intArray[a] = 1
             }
@@ -30,25 +30,5 @@ class Main119 {
         return true
     }
 
-    private fun aaa(ranges: Array<IntArray>, left: Int, right: Int): Pair<Boolean, Boolean> {
-        var a = false
-        var b = false
-        ranges.forEach {
-            val i = it[0]
-            val i1 = it[it.size - 1]
-
-            if (i == 37 && i1 == 49) {
-                return Pair(false, false)
-            }
-
-            if (i <= left || i1 >= left && !a) {
-                a = true
-            }
-            if (i <= right || i1 >= right && !b) {
-                b = true
-            }
-        }
-        return Pair(a, b)
-    }
 
 }

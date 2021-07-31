@@ -30,6 +30,10 @@ class XieCheng {
         }
     }
 
+    suspend fun doSomethingUsefulTwo(): Int {
+        delay(1000L) // 假设我们在这里也做了一些有用的事
+        return 29
+    }
 }
 
 
@@ -61,6 +65,7 @@ class LoginViewModel() : ViewModel() {
 
             }
         }
+
         job.cancel()
 //        job.cancelAndJoin() //取消一个作业并且等待完成
 
@@ -82,7 +87,9 @@ class LoginViewModel() : ViewModel() {
 class Mactivity : AppCompatActivity() {
     fun aa() {
         lifecycleScope.launch {
+
         }
+
 
     }
 
@@ -90,8 +97,14 @@ class Mactivity : AppCompatActivity() {
         it.resume("")
     }
 
-    suspend fun cc() = coroutineScope {
-
+    suspend fun cc(): Int = coroutineScope {
+        val async1 = async<Int> {
+            XieCheng().doSomethingUsefulTwo()
+        }
+        val async2 = async<Int> {
+            XieCheng().doSomethingUsefulTwo()
+        }
+        async1.await() + async2.await()
     }
 
 }
