@@ -62,10 +62,9 @@ class LoginViewModel() : ViewModel() {
             }
             //会被终止
             launch {
-
             }
         }
-
+        job.isActive
         job.cancel()
 //        job.cancelAndJoin() //取消一个作业并且等待完成
 
@@ -74,7 +73,7 @@ class LoginViewModel() : ViewModel() {
 
     fun cc() {
         viewModelScope.launch {
-            // 默认true  调用cancel的时候会变为false
+            // 默认true  调用cancel关闭的时候会变为false
             while (isActive) {
 
             }

@@ -5,6 +5,7 @@ import android.app.Activity;
 import com.muliulan.mll.offer.ListNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 描述:
@@ -17,6 +18,11 @@ import java.util.ArrayList;
 
 public class Dsssss extends Activity {
 
+
+	static void dd(){
+		HashMap<String, String> stringStringHashMap = new HashMap<>();
+		stringStringHashMap.put(null,null);
+	}
 
 	int hammingWeight(int n) {
 
