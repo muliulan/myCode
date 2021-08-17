@@ -17,6 +17,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
     }
 
     buildTypes {
@@ -50,6 +53,5 @@ dependencies {
 
     //关联activity的生命周期
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
-
 
 }
