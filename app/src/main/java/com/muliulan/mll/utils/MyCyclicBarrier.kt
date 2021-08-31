@@ -9,7 +9,7 @@ Date: 2021/7/30
 class MyCyclicBarrier {
 
     /**
-     *
+     *      多线程围栏
     //同步操作锁
     private final ReentrantLock lock = new ReentrantLock();
     //线程拦截器

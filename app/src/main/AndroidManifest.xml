@@ -36,6 +36,9 @@
             </intent-filter>
         </receiver>
 
+
+        <activity android:name=".Bbbb" android:launchMode="singleInstance"/>
+        <activity android:name=".Ccccc"/>
     </application>
 
 </manifest>

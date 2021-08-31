@@ -1,8 +1,10 @@
 package com.muliulan.mll
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 
@@ -28,10 +30,10 @@ class MainActivity : AppCompatActivity() {
         heap.add(7)
         heap.add(10)
 
+        text1.setOnClickListener {
+            startActivity(Intent(this,Bbbb::class.java))
+        }
 
-//        for (a in 5 downTo 0){
-//            Log.e("mll_codeAA",a.toString())
-//        }
 
     }
 
