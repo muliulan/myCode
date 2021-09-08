@@ -15,13 +15,20 @@ class Bbbb : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        text1.text="bbbbbbbbb"
+        text1.text = intent.getStringExtra("aaa")
 
 
         text1.setOnClickListener {
-            startActivity(Intent(this,Ccccc::class.java))
+            startActivity(Intent(this, Ccccc::class.java))
         }
 
+
+        val apply = Intent().apply {
+            putExtra("aaa", "bbbbbbb")
+        }
+        setResult(1, apply)
+
     }
+
 
 }
