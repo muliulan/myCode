@@ -28,7 +28,7 @@ class NetworkLiveData private constructor(cotext: Context) : MutableLiveData<Net
     }
 
     companion object {
-        var instance: NetworkLiveData? = null
+        private var instance: NetworkLiveData? = null
         fun getInstance(context: Context): NetworkLiveData {
             if (instance == null) {
                 synchronized(NetworkLiveData::class) {

@@ -54,7 +54,7 @@ class _2TwoTree {
     }
 
 
-    class Node<E>(it: E, pr: Node<E>?   , ne: Node<E>? ) {
+    class Node<E>(it: E, pr: Node<E>?, ne: Node<E>?) {
         var item: E = it
         var left: Node<E>? = pr
         var right: Node<E>? = ne

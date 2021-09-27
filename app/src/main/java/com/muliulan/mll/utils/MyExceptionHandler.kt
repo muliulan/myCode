@@ -5,6 +5,7 @@ import android.content.Context
 /**
 name: zhaochenshuo
 Date: 2021/8/20
+ 捕获 Java层异常
  **/
 class MyExceptionHandler(context: Context) : Thread.UncaughtExceptionHandler {
 
@@ -29,13 +30,16 @@ class MyExceptionHandler(context: Context) : Thread.UncaughtExceptionHandler {
 
     override fun uncaughtException(t: Thread, e: Throwable) {
 
-//        if (handdefaultUncaughtExceptionHandler != null) {
-//            //处理不了交给系统
-//            defaultUncaughtExceptionHandler.uncaughtException(t, e)
-//        } else {
-//            //自己处理
-//
-//        }
+        if (defaultUncaughtExceptionHandler != null) {
+            //处理不了交给系统
+            defaultUncaughtExceptionHandler.uncaughtException(t, e)
+        } else {
+            //自己处理
+
+        }
+
+
+
     }
 
 
