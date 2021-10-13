@@ -17,6 +17,7 @@ class Bbbb : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         text1.text = "bbbbbbbbbbbbb"
 
+        moveTaskToBack(true); // 设置为后台
 
         text1.setOnClickListener {
             startActivity(Intent(this, Bbbb::class.java))

@@ -69,8 +69,8 @@ class BigView(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
 
 
     init {
-
         setOnTouchListener(this)
+
     }
 
     fun setImage(ips: InputStream) {
