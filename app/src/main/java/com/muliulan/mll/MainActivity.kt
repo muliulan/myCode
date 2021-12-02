@@ -8,6 +8,9 @@ import android.os.MessageQueue
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.GsonBuilder
+import com.muliulan.mll.utils.cha_jian_hua.Daaa
+import com.muliulan.mll.utils.cha_jian_hua.HookUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import java.beans.PropertyChangeSupport
 import java.util.*
@@ -38,25 +41,26 @@ class MainActivity : AppCompatActivity() {
         heap.add(1)
         heap.add(7)
         heap.add(10)
-                Log.e("mll_codeAA", heap.peek().toString() )
+        Log.e("mll_codeAA", heap.peek().toString())
 
 
+//        HookUtil().hookGetService()
 
+        Daaa().hookGetService()
+        aa()
+    }
 
-        val  aaa =   MessageQueue.IdleHandler {
+    fun aa() {
+        val mGson = GsonBuilder()
+            .enableComplexMapKeySerialization()
+            .disableHtmlEscaping()
+            .setLenient().create()
 
+        val  a="/123#456&789*00$11\\22*33"
 
-            true
-        }
-
+        Log.e("mll_codeAA",a)
     }
 
 
-
-
-    override fun getResources(): Resources {
-
-        return super.getResources()
-    }
 }
 

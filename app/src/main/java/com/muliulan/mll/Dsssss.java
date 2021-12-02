@@ -19,9 +19,9 @@ import androidx.core.app.JobIntentService;
 public class Dsssss extends JobIntentService {
 
 	int hammingWeight(int n) {
+       int a= 1 | 1 ;		//or
+		int i1 = 1 ^ 2;		// xor
 
-		int i1 = 1 ^ 2;
-		// xor
 		int i = 111 & (1 << 222);
 //        val i = 111 and (1 shl 222)
 		return 1;

@@ -41,7 +41,7 @@
         </receiver>
 
 
-        <activity android:name=".Bbbb" android:launchMode="singleTask"/>
+        <activity android:name=".Bbbb"  />
         <activity android:name=".Ccccc"/>
     </application>
 

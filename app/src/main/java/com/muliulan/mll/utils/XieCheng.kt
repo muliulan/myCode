@@ -30,6 +30,7 @@ class XieCheng {
         }
     }
 
+
     suspend fun doSomethingUsefulTwo(): Int {
         delay(1000L) // 假设我们在这里也做了一些有用的事
         return 29
@@ -68,7 +69,6 @@ class LoginViewModel() : ViewModel() {
         job.cancel()
 //        job.cancelAndJoin() //取消一个作业并且等待完成
 
-
     }
 
     fun cc() {
@@ -80,6 +80,19 @@ class LoginViewModel() : ViewModel() {
 
         }
 
+    }
+
+
+    fun dd() {
+        viewModelScope.launch(Dispatchers.Main) {
+            print("1:" + Thread.currentThread().name)   //main
+            //线程切换
+            withContext(Dispatchers.IO) {
+                delay(1000)
+                print("2:" + Thread.currentThread().name)   //DefaultDispatcher-worker-1
+            }
+            print("3:" + Thread.currentThread().name)   //main
+        }
     }
 }
 
