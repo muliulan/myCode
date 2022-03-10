@@ -3,6 +3,10 @@ package com.muliulan.mll.dong_nao
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.util.Log
+import androidx.core.graphics.PathUtils
+import java.io.File
+import java.io.FileOutputStream
 
 /**
 描述:     图片压缩
@@ -72,4 +76,31 @@ class ImageResize {
         inSampleSize /= 2
         return inSampleSize
     }
+
+
+// /com.popmart.global.debug E/mll: /storage/emulated/0/Android/data/com.popmart.global.debug/files/pop_image/1639473869717464.jpeg
+    //本地图片保存
+    private fun saveImage(bitmap: Bitmap): String {
+        var fileName = ""
+        try {
+//            fileName = PathUtils.getExternalAppDataPath() + "/files/pop_image" // 使用auc使用auc使用auc使用auc
+
+            val file = File(fileName)
+            if (!file.exists()) {
+                file.mkdirs()
+            }
+
+            fileName = file.toString() + "/IM_${System.currentTimeMillis()}.jpg"
+            val out = FileOutputStream(fileName)
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out)
+            out.flush()
+            out.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Log.e("mll 图片存储异常", e.toString())
+        }
+
+        return fileName
+    }
+
 }

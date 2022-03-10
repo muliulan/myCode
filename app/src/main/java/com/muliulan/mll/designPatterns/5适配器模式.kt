@@ -19,7 +19,7 @@ abstract class Targ {
 
 open class Timpl1 : Targ() {
     override fun fil(s: String): String {
-        return "111"
+        return "META-INF/111"
     }
 }
 

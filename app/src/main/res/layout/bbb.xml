@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_motion_scene"
+    tools:context=".MainActivity"
+    tools:showPaths="true"
+    app:motionDebug="SHOW_ALL">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#000"
+        android:maxLines="1"
+        android:text="bbbbb"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

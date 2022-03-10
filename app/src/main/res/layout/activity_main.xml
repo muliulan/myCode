@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,23 +12,18 @@
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxWidth="100dp"
-        android:maxLines="1"
         android:text="Hello World!"
-        android:textSize="22sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/text2" />
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:maxWidth="100dp"
-        android:maxLines="1"
         android:padding="10dp"
-        android:text="1"
+        android:text="@string/aaaaa"
         android:textSize="22sp"
         app:layout_constraintLeft_toRightOf="@+id/text1" />
 
@@ -40,5 +36,32 @@
         app:layout_constraintLeft_toRightOf="@+id/text2"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <com.muliulan.mll.test.MarkEditText
+        android:id="@+id/edittext"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        android:hint="11111"
+        android:background="#f2f2f2"
+        android:layout_margin="15dp"
+        app:object_foreground_color="@color/colorPrimary"
+        app:object_background_color="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn1"
+        android:text="111"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn2"
+        android:text="222"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn3"
+        android:text="333"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

@@ -1,16 +1,13 @@
 package com.muliulan.mll
 
 import android.content.Intent
-import android.content.res.Resources
 import android.os.Build
 import android.os.Bundle
-import android.os.MessageQueue
+import android.util.ArraySet
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.GsonBuilder
-import com.muliulan.mll.utils.cha_jian_hua.Daaa
-import com.muliulan.mll.utils.cha_jian_hua.HookUtil
+import com.muliulan.mll.xie_cheng.Xc1
 import kotlinx.android.synthetic.main.activity_main.*
 import java.beans.PropertyChangeSupport
 import java.util.*
@@ -19,7 +16,7 @@ import java.util.*
 //  ↖↑↗←↙↓↘→    AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
         text1.setOnClickListener {
-            startActivity(Intent(this, Bbbb::class.java))
+            startActivity(Intent(this, BbbbActivity::class.java))
 
         }
         val changes = PropertyChangeSupport("")
@@ -41,26 +38,38 @@ class MainActivity : AppCompatActivity() {
         heap.add(1)
         heap.add(7)
         heap.add(10)
-        Log.e("mll_codeAA", heap.peek().toString())
 
 
-//        HookUtil().hookGetService()
+        val a = ""
+        val b: String? = null
+        a.isNotEmpty().apply {
 
-        Daaa().hookGetService()
-        aa()
+        }
+
+        val arrayListOf = arrayListOf<String>("11", "22", "33")
+
+        Xc1().aa()
+
+
     }
+
 
     fun aa() {
-        val mGson = GsonBuilder()
-            .enableComplexMapKeySerialization()
-            .disableHtmlEscaping()
-            .setLenient().create()
 
-        val  a="/123#456&789*00$11\\22*33"
 
-        Log.e("mll_codeAA",a)
+        btn1.setOnClickListener {
+            edittext.appendMark("[@1111](www.baidu,com)")
+        }
+
+        btn2.setOnClickListener {
+            text1.text = edittext.text.toString()
+            Log.e("mll",edittext.text.toString())
+        }
+        btn3.setOnClickListener {
+            edittext.dd()
+        }
+
     }
-
 
 }
 

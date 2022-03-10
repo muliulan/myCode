@@ -38,5 +38,7 @@ class ImageId {
     val a17 = R.mipmap.threadpoolexecutor
     val a18 = R.mipmap.viewevent             //事件分发
 
+    //全部流程
+    val a19=R.mipmap.quanbu
 
 }
