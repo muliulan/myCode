@@ -38,7 +38,13 @@ class ImageId {
     val a17 = R.mipmap.threadpoolexecutor
     val a18 = R.mipmap.viewevent             //事件分发
 
+    //jvm
+    val a19=R.mipmap.jvm1                    //运行时数据区
+    val a20=R.mipmap.jvm2                    //jvm内存模型和ART
+
+
     //全部流程
-    val a19=R.mipmap.quanbu
+    val aa=R.mipmap.quanbu
+
 
 }

@@ -15,8 +15,6 @@ class MyApplication : MultiDexApplication(){
     // activityThread 创建Application之后调用的第一个方法
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
-
-
     }
 
 }

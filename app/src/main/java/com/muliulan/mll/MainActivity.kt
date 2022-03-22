@@ -46,10 +46,21 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val arrayListOf = arrayListOf<String>("11", "22", "33")
+        val arrayListOf = arrayListOf<String>()
 
-        Xc1().aa()
 
+//        arrayListOf.firstNotNullOf {
+//            Log.e("mll", "111")
+//        }
+        arrayListOf.firstNotNullOfOrNull {
+
+            Log.e("mll", "222")
+        }
+         arrayListOf.firstOrNull()?.run {
+             Log.e("mll", "333")
+         }
+
+//        Log.e("mll", "$firstOrNull")
 
     }
 
@@ -63,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         btn2.setOnClickListener {
             text1.text = edittext.text.toString()
-            Log.e("mll",edittext.text.toString())
+            Log.e("mll", edittext.text.toString())
         }
         btn3.setOnClickListener {
             edittext.dd()
