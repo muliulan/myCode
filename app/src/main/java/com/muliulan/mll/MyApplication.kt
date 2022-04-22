@@ -1,6 +1,7 @@
 package com.muliulan.mll
 
 import android.content.Context
+import android.util.Log
 import androidx.multidex.MultiDexApplication
 
 /**
@@ -12,9 +13,15 @@ zhaochenshuo
 class MyApplication : MultiDexApplication(){
 
 
-    // activityThread 创建Application之后调用的第一个方法
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
     }
+
+    override fun onCreate() {
+        super.onCreate()
+    }
+
+
+
 
 }

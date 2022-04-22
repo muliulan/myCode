@@ -3,7 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
-//    id 'android-aspectjx'
+    id 'android-aspectjx'
 
 }
 
@@ -22,6 +22,8 @@ android {
 
         multiDexEnabled true
 //        resourcePrefix "${project.name}_"//限制资源命名开头
+        vectorDrawables.useSupportLibrary = true
+
     }
 
     buildTypes {
@@ -37,6 +39,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+}
+// AOP 配置
+aspectjx {
+    // 排除一些第三方库的包名（Gson、 LeakCanary 和 AOP 有冲突）
+    exclude 'androidx', 'com.google', 'com.squareup', 'com.alipay', 'leakcanary',
+            'com.taobao',
+            'com.ut',
+            'org.apache',
+            'org.jetbrains.kotlin',
+            "module-info", 'versions.9',
+            'android.support'
 }
 
 dependencies {
@@ -64,7 +77,117 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
 
+    implementation 'org.aspectj:aspectjrt:1.9.5'
 
+    //asm
+    implementation 'org.ow2.asm:asm:9.1'
+    implementation 'org.ow2.asm:asm-commons:9.1'
+    implementation 'org.ow2.asm:asm-analysis:9.1'
+    implementation 'org.ow2.asm:asm-util:9.1'
+    implementation 'org.ow2.asm:asm-tree:9.1'
 
 
 }
+
+//task aa {
+//    def mList = [1, 2, 3, 4]
+//    mList.each {
+//        println(it)
+//    }
+//
+//    def mMap = ["a": 1, "b": 2]
+//    mMap.eachWithIndex { String key, Integer value, int i ->
+//        println("$key  $value   $i")
+//    }
+//}
+//
+//task bb {
+//    //动态添加属性
+//    Texts.metaClass.c = "cccc"
+//    //动态添加方法
+//    Texts.metaClass.sexUpperCase={
+//        return "sexUpperCase"
+//    }
+//    //动态添加静态方法
+//    Texts.metaClass.static.sexxxxx={
+//        return "sexxxxx"
+//    }
+////    //通过类的 metaClass 来添加元素的这种方式每次使用时都需要重新添加，幸运的是，我们可以在注入前调用全局生效的处理
+////    ExpandoMetaClass.enableGlobally()
+//
+//    def texts = new Texts()
+//
+//    println(texts.cry())
+//    println(texts.c)
+//    println(texts.sexUpperCase())
+//    println(Texts.sexxxxx())
+//
+//}
+//task cc{
+//    description('拷贝release相关文件到apk文件夹')
+//
+//    from('build/outputs/')
+//    into("../apk/${11111}")
+//    include('mapping/', 'apk/prod/release/*-release.apk')
+//    rename("app-prod-release.apk", "pop-global-v${1111}.apk")
+//}
+//
+//class Texts implements Serializable {
+//
+//    //方法找不到时调用它代替 执行2
+//    @Override
+//    def invokeMethod(String s, Object o) {
+//        return "1111"
+//    }
+//    //方法找不到时调用它代替 执行 1
+//    def methodMissing(String name, Object o) {
+//        return "2222"
+//    }
+//
+//}
+//task dd {
+//    //读取文件
+//    def f = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules.pro"
+//    def file = new File(f)
+////    file.eachLine {
+////        println("mll-> $it")//每次读取一行
+////    }
+//    file.withInputStream {
+//        println("mll-> ${it}")//一次全读出来
+//    }
+//}
+task ee{
+    //写文件
+    def f = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules.pro"//原文件
+    def f1 = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules11.pro"//新文件
+
+    file(f1).withOutputStream{ os->
+        file(f).withInputStream {ins->
+            os<<ins
+        }
+    }
+}
+task ff{
+    //网络请求
+
+//    def connection = new URL("http://httpbin.org/get").openConnection()
+//    connection.setRequestProperty("GET")
+//    connection.connect()
+//    def string = connection.content.toString()
+
+//    new JsonSlurper()
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
