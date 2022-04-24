@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android-extensions'
     id 'android-aspectjx'
 
+    id 'com.mll'
 }
 
 android {
@@ -31,7 +32,30 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
+
+    flavorDimensions "version"
+    productFlavors{
+        huawei {
+        }
+
+        oppo {
+        }
+    }
+
+   this.afterEvaluate {
+       android.applicationVariants.all { variant ->
+           variant.outputs.all {
+               //修改打包后的apk文件名
+               outputFileName = "ApkName_${variant.productFlavors[0].name}_${variant.name}_v${variant.versionName}.apk"
+           }
+       }
+   }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -40,6 +64,9 @@ android {
         jvmTarget = '1.8'
     }
 }
+
+
+
 // AOP 配置
 aspectjx {
     // 排除一些第三方库的包名（Gson、 LeakCanary 和 AOP 有冲突）
@@ -85,7 +112,6 @@ dependencies {
     implementation 'org.ow2.asm:asm-analysis:9.1'
     implementation 'org.ow2.asm:asm-util:9.1'
     implementation 'org.ow2.asm:asm-tree:9.1'
-
 
 }
 
@@ -156,29 +182,24 @@ dependencies {
 //        println("mll-> ${it}")//一次全读出来
 //    }
 //}
-task ee{
-    //写文件
-    def f = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules.pro"//原文件
-    def f1 = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules11.pro"//新文件
+//task ee{
+//    //写文件
+//    def f = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules.pro"//原文件
+//    def f1 = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules11.pro"//新文件
+//
+//    file(f1).withOutputStream{ os->
+//        file(f).withInputStream {ins->
+//            os<<ins
+//        }
+//    }
+//}
 
-    file(f1).withOutputStream{ os->
-        file(f).withInputStream {ins->
-            os<<ins
-        }
-    }
+releaseInfo {
+    versionName = "name"
+    versionCode = "code"
+    versionInfo = "info"
+    fileName = "fname"
 }
-task ff{
-    //网络请求
-
-//    def connection = new URL("http://httpbin.org/get").openConnection()
-//    connection.setRequestProperty("GET")
-//    connection.connect()
-//    def string = connection.content.toString()
-
-//    new JsonSlurper()
-
-}
-
 
 
 

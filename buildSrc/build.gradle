@@ -1,0 +1,39 @@
+plugins{
+    id 'groovy'
+}
+
+repositories {
+    google()
+    mavenCentral()
+    jcenter()
+}
+
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation "commons-io:commons-io:2.6"
+    implementation 'com.android.tools.build:gradle:3.6.2'
+
+//    implementation group: 'org.ow2.asm', name: 'asm', version: '7.1'
+//    implementation group: 'org.ow2.asm', name: 'asm-commons', version: '7.1'
+}
+
+
+sourceSets{
+    main{
+        groovy{
+            srcDir 'src/main/groovy'
+        }
+        resources{
+            srcDir 'src/main/resources'
+        }
+    }
+
+}
+
+
+
+
+
+
