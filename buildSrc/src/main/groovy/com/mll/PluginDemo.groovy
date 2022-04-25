@@ -14,10 +14,6 @@ class PluginDemo implements Plugin<Project> {
         def versionNameMsg = project.extensions.releaseInfo.versionName
 
         println("mll-> ${versionNameMsg}  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-
-
-
-
     }
 }
 

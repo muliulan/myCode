@@ -1,0 +1,151 @@
+android {
+    flavorDimensions "version"
+    productFlavors {
+        huawei {
+        }
+
+        oppo {
+        }
+    }
+
+    this.afterEvaluate {
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                //修改打包后的apk文件名
+                outputFileName = "ApkName_${variant.productFlavors[0].name}_${variant.name}_v${variant.versionName}.apk"
+            }
+        }
+    }
+
+}
+
+
+//复制文件
+task makeRelease(type: Copy, group: 'pop') {
+    description('拷贝release相关文件到apk文件夹')
+    from('build/outputs/apk')//目标文件
+    into("../apk/111")//复制位置
+    include("/*/*/*.apk")//只包含
+//    rename("/*/*/*.apk", "nnnn.apk")//重命名
+}
+
+//自动执行打包命令
+project.afterEvaluate {
+    makeRelease.dependsOn([clean, assembleHuaweiRelease])
+    assembleHuaweiRelease.mustRunAfter(clean)
+}
+
+task kk {
+    doLast {
+        println("最后执行")
+    }
+    doFirst {
+        println("第二执行")
+    }
+    println("第一执行")
+}
+
+//task v(type: MyDemo) {
+//    doLast {
+//        println("最后执行")
+//    }
+//}
+//task v1 {
+//    println("444444444444")
+//}
+////v.dependsOn v1 //执行V任务时(执行完v1 在执行v)
+//v.mustRunAfter v1//执行v之前 先执行v1
+
+//class MyDemo extends DefaultTask {
+//    @TaskAction
+//    void action() {
+//        println("6666666666666")
+//    }
+//}
+
+
+//task aa {
+//    def mList = [1, 2, 3, 4]
+//    mList.each {
+//        println(it)
+//    }
+//
+//    def mMap = ["a": 1, "b": 2]
+//    mMap.eachWithIndex { String key, Integer value, int i ->
+//        println("$key  $value   $i")
+//    }
+//}
+//
+//task bb {
+//    //动态添加属性
+//    Texts.metaClass.c = "cccc"
+//    //动态添加方法
+//    Texts.metaClass.sexUpperCase={
+//        return "sexUpperCase"
+//    }
+//    //动态添加静态方法
+//    Texts.metaClass.static.sexxxxx={
+//        return "sexxxxx"
+//    }
+////    //通过类的 metaClass 来添加元素的这种方式每次使用时都需要重新添加，幸运的是，我们可以在注入前调用全局生效的处理
+////    ExpandoMetaClass.enableGlobally()
+//
+//    def texts = new Texts()
+//
+//    println(texts.cry())
+//    println(texts.c)
+//    println(texts.sexUpperCase())
+//    println(Texts.sexxxxx())
+//
+//}
+//task cc{
+//    description('拷贝release相关文件到apk文件夹')
+//
+//    from('build/outputs/')
+//    into("../apk/${11111}")
+//    include('mapping/', 'apk/prod/release/*-release.apk')
+//    rename("app-prod-release.apk", "pop-global-v${1111}.apk")
+//}
+//
+//class Texts implements Serializable {
+//
+//    //方法找不到时调用它代替 执行2
+//    @Override
+//    def invokeMethod(String s, Object o) {
+//        return "1111"
+//    }
+//    //方法找不到时调用它代替 执行 1
+//    def methodMissing(String name, Object o) {
+//        return "2222"
+//    }
+//
+//}
+//task dd {
+//    //读取文件
+//    def f = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules.pro"
+//    def file = new File(f)
+////    file.eachLine {
+////        println("mll-> $it")//每次读取一行
+////    }
+//    file.withInputStream {
+//        println("mll-> ${it}")//一次全读出来
+//    }
+//}
+//task ee{
+//    //写文件
+//    def f = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules.pro"//原文件
+//    def f1 = "/Users/zhaochenshuo/Desktop/myCode/app/proguard-rules11.pro"//新文件
+//
+//    file(f1).withOutputStream{ os->
+//        file(f).withInputStream {ins->
+//            os<<ins
+//        }
+//    }
+//}
+
+releaseInfo {
+    versionName = "name"
+    versionCode = "code"
+    versionInfo = "info"
+    fileName = "fname"
+}
