@@ -22,7 +22,6 @@ class MyExceptionHandler(context: Context) : Thread.UncaughtExceptionHandler {
      * */
 
     init {
-
         //吧自定义的ExceptionHandler设置给系统
         Thread.setDefaultUncaughtExceptionHandler(this)
     }

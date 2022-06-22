@@ -1,4 +1,16 @@
 android {
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
     flavorDimensions "version"
     productFlavors {
         huawei {
@@ -19,11 +31,13 @@ android {
 
 }
 
-
+ext.versionCode = 1
+ext.versionName = "2.2.2"
+//////////////////////////////////////////////////////
 //复制文件
-task makeRelease(type: Copy, group: 'pop') {
-    description('拷贝release相关文件到apk文件夹')
-    from('build/outputs/apk')//目标文件
+task releaseApk(type: Copy, group: 'pop') {
+    description("拷贝release相关文件到apk文件夹")
+    from("build/outputs/apk")//目标文件
     into("../apk/111")//复制位置
     include("/*/*/*.apk")//只包含
 //    rename("/*/*/*.apk", "nnnn.apk")//重命名
@@ -31,9 +45,35 @@ task makeRelease(type: Copy, group: 'pop') {
 
 //自动执行打包命令
 project.afterEvaluate {
-    makeRelease.dependsOn([clean, assembleHuaweiRelease])
+    releaseApk.dependsOn([clean, assembleHuaweiRelease])
     assembleHuaweiRelease.mustRunAfter(clean)
 }
+//删除
+task delApk(type: Delete) {
+    delete("build/outputs")
+}
+delApk.dependsOn(releaseApk)
+
+//上传蒲公英
+task makeProd(type: Exec, group: 'pgy') {
+    description('生成Prod版本，并上传到fir')
+
+//    workingDir '../apk/111/huawei/release/qq.apk'
+    commandLine "curl", "-F", "file=@../apk/111/huawei/release/qq.apk",
+            "-F", "uKey=0abce54fa72d54ce326740b0473c43ba",
+            "-F", "_api_key=02d23a7ab4bda68a383e83b35b281533",
+            "https://www.pgyer.com/apiv2/app/upload"
+}
+
+
+//////////////////////////////////////////////////////
+
+//执行任务 可以传入参数 ./gradlew hell -Paaa=111
+//task hell{
+//    def a=project.hasProperty("aaa")? aaa :"没有传入"
+//    println("mll->hell: "+a)
+//}
+
 
 task kk {
     doLast {
@@ -42,8 +82,9 @@ task kk {
     doFirst {
         println("第二执行")
     }
-    println("第一执行")
+//    println("第一执行${code}")
 }
+
 
 //task v(type: MyDemo) {
 //    doLast {
@@ -54,7 +95,7 @@ task kk {
 //    println("444444444444")
 //}
 ////v.dependsOn v1 //执行V任务时(执行完v1 在执行v)
-//v.mustRunAfter v1//执行v之前 先执行v1
+//v.mustRunAfter v1//同时执行v和v1 -> 先执行v1 在执行v
 
 //class MyDemo extends DefaultTask {
 //    @TaskAction

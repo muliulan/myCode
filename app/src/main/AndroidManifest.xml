@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.LeetCode">
-        <activity android:name="com.muliulan.mll.MainActivity">
+        <activity android:name="com.muliulan.mll.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,14 +29,16 @@
         </activity>
 
 
-        <receiver android:name=".dong_nao.dian_liang.PowerConnectionReceiver">
+        <receiver android:name=".dong_nao.dian_liang.PowerConnectionReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".dong_nao.dian_liang.WifiReceiver" >
+        <receiver android:name=".dong_nao.dian_liang.WifiReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>

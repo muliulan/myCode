@@ -45,6 +45,7 @@ class ImageId {
 
     //全部流程
     val aa=R.mipmap.quanbu
+    val aa1=R.mipmap.quanbu1
 
 
 }

@@ -2,6 +2,7 @@ package com.muliulan.mll
 
 import android.content.Context
 import android.util.Log
+import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 
 /**
@@ -12,7 +13,6 @@ zhaochenshuo
 
 class MyApplication : MultiDexApplication(){
 
-
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
     }
@@ -20,8 +20,6 @@ class MyApplication : MultiDexApplication(){
     override fun onCreate() {
         super.onCreate()
     }
-
-
 
 
 }
