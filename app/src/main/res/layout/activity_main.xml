@@ -50,12 +50,12 @@
 
     <Button
         android:id="@+id/btn1"
-        android:text="111"
+        android:text="相机"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
     <Button
         android:id="@+id/btn2"
-        android:text="222"
+        android:text="相册"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
     <Button
@@ -65,9 +65,8 @@
         android:layout_height="50dp"/>
 
     <ImageView
-        android:scaleType="centerCrop"
-        android:src="@mipmap/qqqq"
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="125dp"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
