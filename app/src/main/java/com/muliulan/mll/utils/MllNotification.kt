@@ -19,7 +19,7 @@ import com.muliulan.mll.R
  */
 class MllNotification {
 
-
+//   震动权限   <uses-permission android:name="android.permission.VIBRATE"/>
     companion object {
 
 
@@ -41,16 +41,17 @@ class MllNotification {
                     ).apply {
                         description = "描述"// 用户在系统设置中看到的说明
                         setShowBadge(false) // 是否在桌面显示角标
+                        enableVibration(true)
                     })
                 }
                 val mBuilder = NotificationCompat.Builder(context, mNormalChannelId)
                     .setContentTitle("普通通知") // 标题
                     .setContentText("普通通知内容") // 文本
-                    .setSmallIcon(com.muliulan.mll.R.mipmap.ic_launcher) // 小图标
+                    .setSmallIcon( R.mipmap.ic_launcher) // 小图标
                     .setLargeIcon(
                         BitmapFactory.decodeResource(
                             context.resources,
-                            com.muliulan.mll.R.mipmap.qqqq
+                             R.mipmap.qqqq
                         )
                     ) // 大图标
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT) // 7.0 设置优先级
@@ -85,16 +86,17 @@ class MllNotification {
                     ).apply {
                         description = "描述"
                         setShowBadge(false) // 是否在桌面显示角标
+                        enableVibration(true)//声音和震动
                     })
                 }
                 val mBuilder = NotificationCompat.Builder(context, mHighChannelId)
                     .setContentTitle("重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知重要通知")
                     .setContentText("重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容重要通知内容")
-                    .setSmallIcon(com.muliulan.mll.R.mipmap.ic_launcher)
+                    .setSmallIcon( R.mipmap.ic_launcher)
                     .setLargeIcon(
                         BitmapFactory.decodeResource(
                             context.resources,
-                            com.muliulan.mll.R.mipmap.qqqq
+                             R.mipmap.qqqq
                         )
                     )
                     .setAutoCancel(true)
