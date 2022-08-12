@@ -16,6 +16,15 @@ import java.io.File
  * 选择照片的协定
  * Input type  : Unit? 不需要传值
  * Output type : Uri?  选择完成后的 image uri
+ *
+ *
+ * 使用
+ *          需要 ComponentActivity
+    private val launcher = registerForActivityResult(SelectPhotoContract()) {
+        textView.text = it
+    }
+ *
+ *
  */
 class SelectPhotoContract : ActivityResultContract<Unit?, Uri?>() {
 

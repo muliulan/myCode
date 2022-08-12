@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId "com.shopping.leetcode1"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
         versionName "1.0.1"
@@ -66,23 +66,27 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0"
 
 
-    implementation 'androidx.activity:activity:1.2.0-beta01'
-    implementation 'androidx.fragment:fragment:1.3.0-beta01'
+//    implementation 'androidx.activity:activity:1.2.0-beta01'
+//    implementation 'androidx.fragment:fragment:1.3.0-beta01'
 
-    implementation 'com.google.code.gson:gson:2.8.8'
     implementation 'com.blankj:utilcode:1.30.6'
 
     implementation 'androidx.core:core-ktx:1.7.0'
 
     implementation 'org.aspectj:aspectjrt:1.9.5'
 
-    //asm
+//    //asm
     implementation 'org.ow2.asm:asm:9.1'
     implementation 'org.ow2.asm:asm-commons:9.1'
     implementation 'org.ow2.asm:asm-analysis:9.1'
     implementation 'org.ow2.asm:asm-util:9.1'
     implementation 'org.ow2.asm:asm-tree:9.1'
 
+
+
+
+    implementation "androidx.activity:activity-ktx:1.5.0"
+    implementation "androidx.fragment:fragment-ktx:1.5.0"
 }
 
 

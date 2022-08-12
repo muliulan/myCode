@@ -1,8 +1,6 @@
 package com.muliulan.mll
 
 import android.content.Context
-import android.util.Log
-import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 
 /**
@@ -11,15 +9,23 @@ zhaochenshuo
 2021/5/12
  */
 
-class MyApplication : MultiDexApplication(){
+class MyApplication : MultiDexApplication() {
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
     }
 
+
+
     override fun onCreate() {
         super.onCreate()
     }
+
+    override fun onTerminate() {
+        super.onTerminate()
+    }
+
+
 
 
 }

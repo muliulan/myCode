@@ -5,13 +5,15 @@ import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.MainScope
 import java.util.*
 
 /**
 name: zhaochenshuo
 Date: 2021/8/24
  **/
-class CccccActivity : AppCompatActivity() {
+class CccccActivity : AppCompatActivity(), CoroutineScope by MainScope() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

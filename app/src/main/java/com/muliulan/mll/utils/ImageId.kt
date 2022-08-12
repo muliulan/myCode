@@ -49,5 +49,5 @@ class ImageId {
     val aa = R.mipmap.quanbu
     val aa1 = R.mipmap.quanbu1
 
-
+    val a22 =R.mipmap.she_ji                    //设计模式
 }
