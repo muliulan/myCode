@@ -1,11 +1,8 @@
 package com.muliulan.mll.xie_cheng
 
-import android.app.Activity
 import android.util.Log
 import kotlinx.coroutines.*
-import java.lang.Exception
 import java.lang.NullPointerException
-import java.util.*
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
@@ -17,6 +14,10 @@ import kotlin.coroutines.suspendCoroutine
  *    desc    :
  */
 class Xc1 {
+
+    //初始化viewModel
+//    private val mm: MeViewModel by viewModels()
+
 
     fun aa() {
         /**

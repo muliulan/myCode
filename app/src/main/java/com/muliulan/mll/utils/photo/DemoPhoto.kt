@@ -7,8 +7,8 @@ import TakePhotoContract
 import android.net.Uri
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  *    @author : zhaoCS
@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  */
 class DemoPhoto : AppCompatActivity() {
 
+    private val imageView :ImageView =ImageView(this)
 
     // 剪裁图片
     private val cropPhoto = registerForActivityResult(CropPhotoContract()) { uri: Uri? ->

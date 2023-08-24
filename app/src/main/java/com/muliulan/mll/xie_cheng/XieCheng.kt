@@ -14,7 +14,6 @@ name: zhaochenshuo
 Date: 2021/7/9
  **/
 class XieCheng {
-
     suspend fun makeLoginRequest() {
 
         //线程切换
@@ -30,15 +29,25 @@ class XieCheng {
         }
     }
 
-
     suspend fun doSomethingUsefulTwo(): Int {
         delay(1000L) // 假设我们在这里也做了一些有用的事
         return 29
     }
+
+    fun aa() {
+        val completableDeferred = CompletableDeferred<Boolean>()
+        completableDeferred.complete(true)
+//        val a = completableDeferred.isCancelled
+//        val b = completableDeferred.isActive
+//        val c = completableDeferred.isCompleted
+
+//        Log.e("mll", "${a} ${b} ${c}")
+
+    }
 }
 
 
-class LoginViewModel() : ViewModel() {
+class LoginViewModel : ViewModel() {
     fun aa() {
         viewModelScope.launch {
             XieCheng().makeLoginRequest()
@@ -94,6 +103,7 @@ class LoginViewModel() : ViewModel() {
             print("3:" + Thread.currentThread().name)   //main
         }
     }
+
 }
 
 class Mactivity : AppCompatActivity() {
