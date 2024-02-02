@@ -1,5 +1,6 @@
 import android.accessibilityservice.AccessibilityService
 import android.os.Build
+import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import androidx.annotation.RequiresApi
 import com.blankj.utilcode.util.LogUtils
@@ -27,8 +28,9 @@ class MyAccessibilityService : AccessibilityService() {
             return
         }
         if ("com.yufs.accessibility" == packageName) {
-            LogUtils.e("Thread:${Thread.currentThread().name},event:${event}")
-            //找到对应node，开始点击
+
+
+            //第一种方式 通过view的ID模拟
             val nodeInfo = AsUtils.findNodeInfo(
                 this,
                 "com.yufs.accessibility:id/btn_click_node",
@@ -44,11 +46,16 @@ class MyAccessibilityService : AccessibilityService() {
             }
 
 
+            //第二种方式 通过view的内容
+            AsUtils.textClick(this, "提交订单")
+
         }
+
+
     }
 
     override fun onInterrupt() {
-        LogUtils.e("onInterrupt==>")
+        Log.e("mll", "onInterrupt")
     }
 
     /**
@@ -60,7 +67,7 @@ class MyAccessibilityService : AccessibilityService() {
         thread {
             //便于设置完成后返回来看到显示效果
             Thread.sleep(5000)
-            LogUtils.e("坐标点击：500,515")
+            Log.e("mll", "坐标点击：500,515")
             AsUtils.click(this, 100f, 100f)
         }
     }

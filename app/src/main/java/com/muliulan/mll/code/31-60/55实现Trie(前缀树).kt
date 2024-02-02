@@ -86,7 +86,7 @@ class Main55() {
                     return true
                 }
             } else {
-                if (mPrefix.length <= v.length && mPrefix == v?.substring(0, mPrefix.length)) {
+                if (mPrefix.length <= v!!.length && mPrefix == v?.substring(0, mPrefix.length)) {
                     return true
                 }
             }

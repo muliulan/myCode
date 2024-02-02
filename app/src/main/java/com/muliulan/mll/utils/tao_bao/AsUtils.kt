@@ -1,4 +1,3 @@
-
 import android.accessibilityservice.AccessibilityService
 import android.accessibilityservice.GestureDescription
 import android.app.ActivityManager
@@ -16,8 +15,8 @@ import androidx.annotation.RequiresApi
 
 
 /**
- *Author: YFS(893145181@qq.com)
- *Time:2022/8/16 11:01
+ *
+ * 无障碍相关
  */
 object AsUtils {
     /**
@@ -75,6 +74,7 @@ object AsUtils {
      * 唤醒屏幕
      */
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT_WATCH)
     private fun wakeUpScreed(context: Context, tag: String) {
         val powerManager = context.getSystemService(Context.POWER_SERVICE) as PowerManager
         if (!powerManager.isInteractive) {
@@ -84,11 +84,10 @@ object AsUtils {
                 tag
             )
 
-            wl.acquire(60*1000L)
+            wl.acquire(60 * 1000L)
             wl.release()
         }
     }
-
 
 
     /**
@@ -137,8 +136,8 @@ object AsUtils {
     /**
      * 查找节点信息
      *
-     * @param id
-     * @param text
+     * @param id view的ID
+     * @param text view的内容
      * @param contentDescription
      * @return null表示未找到
      */
@@ -173,6 +172,16 @@ object AsUtils {
             }
         }
         return null
+    }
+
+    /**
+     * 通过text获取节点
+     *
+     * */
+    fun textClick(service: AccessibilityService, text: String) {
+        service.rootInActiveWindow?.findAccessibilityNodeInfosByText(text)?.forEach {
+            performClickNodeInfo(it)
+        }
     }
 
     /**
