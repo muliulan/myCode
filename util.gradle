@@ -184,9 +184,9 @@ task kk {
 //    }
 //}
 
-releaseInfo {
-    versionName = "name"
-    versionCode = "code"
-    versionInfo = "info"
-    fileName = "fname"
-}
+//releaseInfo {
+//    versionName = "name"
+//    versionCode = "code"
+//    versionInfo = "info"
+//    fileName = "fname"
+//}

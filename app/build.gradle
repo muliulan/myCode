@@ -3,9 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
-    id 'android-aspectjx'
+//    id 'android-aspectjx'
 
-    id 'com.mll'
+//    id 'com.mll'
 }
 apply from: '../util.gradle'
 
@@ -38,16 +38,16 @@ android {
 }
 
 // AOP 配置
-aspectjx {
-    // 排除一些第三方库的包名（Gson、 LeakCanary 和 AOP 有冲突）
-    exclude 'androidx', 'com.google', 'com.squareup', 'com.alipay', 'leakcanary',
-            'com.taobao',
-            'com.ut',
-            'org.apache',
-            'org.jetbrains.kotlin',
-            "module-info", 'versions.9',
-            'android.support'
-}
+//aspectjx {
+//    // 排除一些第三方库的包名（Gson、 LeakCanary 和 AOP 有冲突）
+//    exclude 'androidx', 'com.google', 'com.squareup', 'com.alipay', 'leakcanary',
+//            'com.taobao',
+//            'com.ut',
+//            'org.apache',
+//            'org.jetbrains.kotlin',
+//            "module-info", 'versions.9',
+//            'android.support'
+//}
 
 dependencies {
 
